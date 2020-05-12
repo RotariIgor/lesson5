@@ -2,27 +2,23 @@ class Animal:
     def __init__(self, name):
         self.name = name
 
-    def eat(self, food):
-        print(f'I like to eat {food}')
-
-    def sound(self, sound):
-        print(f' My sound is {sound}')
-
-
 class Lion(Animal):
-    pass
+    def eat(self):
+        print(f'I like to eat meat')
+    def sound(self):
+        print(f' My sound is RRRRRRR')
 
 
 class Cat(Animal):
-    pass
-
+    def eat(self):
+        print(f'I like to eat milk')
+    def sound(self):
+        print(f' My sound is Miau')
 
 MyLion = Lion('The lion')
-print(MyLion.name)
-MyLion.eat('meat')
-MyLion.sound('Rrrrrrr')
-
 MyCat = Cat('The cat')
-print(MyCat.name)
-MyCat.eat('milk')
-MyCat.sound('Miau')
+list_animals=[MyLion, MyCat]
+for i in list_animals:
+    print(i.name)
+    i.eat()
+    i.sound()
